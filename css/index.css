@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    color: #5a3825;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+    max-height: 3.1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #5a3825;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Active Link Styles */
+.nav-links a.active {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Banner Styles */
+.banner {
+    background-color: #543310;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.15rem;
+    color: white;
+}
+
+.banner-left, .banner-right {
+    flex: 1;
+    text-align: center;
+}
+
+.banner-buttons {
+    margin-top: 0.625rem;
+}
+
+.menu-btn, .contact-btn {
+    text-decoration: none;
+    background-color: white;
+    color: #5a3825;
+    border: none;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.6rem;
+    border-radius: 10rem;
+}
+.menu-btn:hover, .contact-btn:hover {
+    background-color: #ddd;
+}
+
+/* Section Styles */
+section {
+    margin: 1rem auto;
+    max-width: 86%;
+}
+
+/* About and History Section Styles */
+.about-section, .history-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.4rem;
+    border-radius: 8px;
+    max-height: 20rem;
+}
+
+/* Image and Text Alignment for About and History */
+.about-section .about-image, 
+.history-section .history-image {
+    flex: 1;
+    max-width: 30%;
+    max-height: inherit;
+    object-fit: cover;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .about-text,
+.history-section .history-text {
+    flex: 1;
+    max-width: 65%;
+    max-height: inherit;
+    padding: 1.25rem;
+    background-color: #3E3232;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for Images */
+.about-section img, 
+.history-section img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #543310;
+    color: white;
+    text-align: center;
+    padding: 0.625rem;
+    margin-top: 1.25rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: #ddd;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+
+    /* Adjust Banner Section */
+    .banner-left, .banner-right {
+        flex-basis: 100%; /* Stack banner content vertically */
+        margin-bottom: 0.625rem;
+    }
+    .about-section .about-image{
+        margin-right: 5px;
+    }
+    .history-section .history-image {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Adjust About and History Sections */
+    .about-section, .history-section {
+        flex-direction: column; /* Stack the image and text vertically */
+        max-height: unset; /* Remove height restrictions */
+    }
+
+    .about-section .about-image, 
+    .history-section .history-image {
+        max-width: 100%; /* Full width for the image */
+        max-height: unset;
+    }
+    .about-section .about-image{
+        margin-bottom: 0.625rem;
+    }
+    .history-section .history-text{
+        margin-bottom: 0.625rem;
+    }
+    .about-section img, 
+    .history-section img {
+        max-height: 15rem;
+    }
+
+    .about-section .about-text,
+    .history-section .history-text {
+        max-width: 100%; /* Full width for the text section */
+        padding: 0.625rem;
+    }
+
+    /* Adjust Banner Buttons */
+    .menu-btn, .contact-btn {
+        font-size: 0.9rem; /* Smaller buttons on mobile */
+        padding: 0.5rem 1.5rem;
+    }
+
+    /* Adjust Footer */
+    footer {
+        font-size: 0.9rem; /* Slightly smaller footer text */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* About & History Image and Text adjustments */
+    .about-section img, 
+    .history-section img {
+        height: unset; /* Let image height be dynamic */
+    }
+
+    .about-section .about-text,
+    .history-section .history-text {
+        font-size: 0.9rem; /* Smaller text for readability */
+    }
+
+    /* Reduce Footer padding */
+    footer {
+        padding: 5px;
+    }
+}
+

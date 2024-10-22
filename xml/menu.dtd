@@ -1,0 +1,14 @@
+<!ELEMENT menu (meals, beverages, otherBeverages)>
+<!ELEMENT meals (meal+)>
+<!ELEMENT meal (name, image, price, description)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT beverages (beverage+)>
+<!ELEMENT beverage (name, image, sizes, description)>
+<!ELEMENT sizes (size+)>
+<!ELEMENT size (name, price)>
+
+<!ELEMENT otherBeverages (beverage+)>

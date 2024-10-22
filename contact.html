@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./assets/images/logo.png" alt="Bryan's Café Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">About</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <script>
+            // active class interchange
+            // all navigation links
+            const navLinks = document.querySelectorAll('.nav-links a');
+        
+            // remove 'active' from all links and add to the clicked one
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Remove 'active' class from all links
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+        
+                    // Add 'active' class to the clicked link
+                    this.classList.add('active');
+                });
+            });
+        </script>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Contact Form Section -->
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form onsubmit="return notifyUser()">
+                    <div class="input-row">
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="text" name="subject" placeholder="Message Subject" required>
+                    <textarea name="message" placeholder="Message Body" rows="5" required></textarea>
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            <div id="notification" class="notification"></div>
+
+            <script>
+                function notifyUser() {
+                    // Get the notification div
+                    const notification = document.getElementById("notification");
+
+                    // Set the notification message
+                    notification.textContent = "Your message has been sent!";
+                    notification.style.display = "block"; 
+
+                    setTimeout(() => {
+                        document.querySelector("form").reset();
+                        notification.style.display = "none";
+                    }, 3000);
+
+                    // Prevent form submission
+                    return false; 
+                }
+            </script>
+            </div>
+            <div class="form-description">
+                <h2>Have a question or need more information?</h2>
+                <p>Fill out the enquiry form with your name, email, and message subject.<br>Let us know how we can assist you, and our team will respond promptly.</p>
+            </div>
+        </div>
+        
+        <!-- Branch Information Section -->
+        <div class="branches">
+            <div class="branch-info">
+                <h2>Our Branches</h2>
+                <table id="branches-table">
+                    <tr>
+                        <th>ADDRESS</th>
+                        <th>CONTACT</th>
+                        <th>OPEN HOURS</th>
+                        <th>MAP</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="branch-description">
+                <h2>Find your nearest Bryan's Cafe branch.</h2>
+                <p>We’ve provided the addresses, contact numbers, and opening hours for each location.<br>Feel free to visit or give us a call during our operating hours.</p>
+            </div>
+        </div>
+    </main> 
+
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Bryan’s Café | <a href="./privacy.html" target="_blank">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // Load branch data from XML
+        fetch('../xml/branches.xml')
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, "text/xml");
+                const branches = xmlDoc.getElementsByTagName("branch");
+                const table = document.getElementById("branches-table");
+
+                for (let i = 0; i < branches.length; i++) {
+                    const address = branches[i].getElementsByTagName("address")[0].textContent;
+                    const contact = branches[i].getElementsByTagName("contact")[0].textContent;
+                    const openHours = branches[i].getElementsByTagName("openHours")[0].innerHTML;
+                    const mapLink = branches[i].getElementsByTagName("mapLink")[0].textContent;
+
+                    const row = table.insertRow();
+                    row.innerHTML = `
+                        <td>${address}</td>
+                        <td>${contact}</td>
+                        <td>${openHours}</td>
+                        <td><a href="${mapLink}" target="_blank">View Map</a></td>
+                    `;
+                }
+            })
+            .catch(error => console.error('Error loading the XML file:', error));
+    </script>
+</body>
+</html>
