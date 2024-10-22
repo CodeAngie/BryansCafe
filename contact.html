@@ -111,7 +111,7 @@
 
     <script>
         // Load branch data from XML
-        fetch('../xml/branches.xml')
+        fetch('./xml/branches.xml')
             .then(response => response.text())
             .then(data => {
                 const parser = new DOMParser();
