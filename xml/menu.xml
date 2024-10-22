@@ -3,25 +3,25 @@
     <meals>
         <meal>
             <name>Beetroot and feta salad</name>
-            <image>../assets/images/beetroot.jpg</image>
+            <image>./assets/images/beetroot.jpg</image>
             <price>$15.00</price>
             <description>Suitable for vegetarians, made with fresh beetroot</description>
         </meal>
         <meal>
             <name>Sourdough Rye Sandwich</name>
-            <image>../assets/images/sandwich.jpg</image>
+            <image>./assets/images/sandwich.jpg</image>
             <price>$18.00</price>
             <description>Cheese and salad sandwich made with organic, sourdough rye bread</description>
         </meal>
         <meal>
             <name>Spinach Pie and Salad</name>
-            <image>../assets/images/spinach.jpg</image>
+            <image>./assets/images/spinach.jpg</image>
             <price>$20.00</price>
             <description>Tasty pie with salad</description>
         </meal>
         <meal>
             <name>Feta pancakes with salad</name>
-            <image>../assets/images/pancakes.jpg</image>
+            <image>./assets/images/pancakes.jpg</image>
             <price>$19.50</price>
             <description>Tasty pancake filled with feta and salad</description>
         </meal>
@@ -29,7 +29,7 @@
     <beverages>
         <beverage>
             <name>Coffee and hot chocolates</name>
-            <image>../assets/images/coffee.jpg</image>
+            <image>./assets/images/coffee.jpg</image>
             <sizes>
                 <size>
                     <name>Small</name>
@@ -50,17 +50,17 @@
     <otherBeverages>
         <beverage>
             <name>Soda</name>
-            <image>../assets/images/soda.jpg</image>
+            <image>./assets/images/soda.jpg</image>
             <price>$3.00</price>
         </beverage>
         <beverage>
             <name>Fresh Juice</name>
-            <image>../assets/images/juice.jpg</image>
+            <image>./assets/images/juice.jpg</image>
             <price>$6.00</price>
         </beverage>
         <beverage>
             <name>Bottled Water</name>
-            <image>../assets/images/water.jpg</image>
+            <image>./assets/images/water.jpg</image>
             <price>$2.00</price>
         </beverage>
     </otherBeverages>
