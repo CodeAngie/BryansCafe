@@ -7,7 +7,7 @@
 <!ELEMENT description (#PCDATA)>
 
 <!ELEMENT beverages (beverage+)>
-<!ELEMENT beverage (name, image, sizes, description)>
+<!ELEMENT beverage (name, image, price?, sizes?, description?)>
 <!ELEMENT sizes (size+)>
 <!ELEMENT size (name, price)>
 
