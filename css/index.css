@@ -111,8 +111,10 @@ section {
 .about-section .about-text,
 .history-section .history-text {
     flex: 1;
+    flex-wrap: wrap;
+    overflow: scroll;
     max-width: 65%;
-    max-height: inherit;
+    max-height: 17.5rem;
     padding: 1.25rem;
     background-color: #3E3232;
     color: #fff;
@@ -151,14 +153,36 @@ footer a:hover {
 
     /* Adjust Banner Section */
     .banner-left, .banner-right {
-        flex-basis: 100%; /* Stack banner content vertically */
+        flex-basis: 100%; /
         margin-bottom: 0.625rem;
     }
-    .about-section .about-image{
-        margin-right: 5px;
+    /* Adjust About and History Sections */
+    .about-section, .history-section {
+        flex-direction: column; 
+        max-height: unset; 
     }
+
+    .about-section .about-image, 
     .history-section .history-image {
-        margin-left: 5px;
+        max-width: 100%; 
+        max-height: unset;
+    }
+    .about-section .about-image{
+        margin-bottom: 0.625rem;
+    }
+    .history-section .history-text{
+        margin-bottom: 0.625rem;
+    }
+    .about-section img, 
+    .history-section img {
+        max-height: 15rem;
+    }
+
+    .about-section .about-text,
+    .history-section .history-text {
+        max-width: 100%; 
+        max-height:inherit;
+        padding: 0.625rem;
     }
 }
 
@@ -175,42 +199,20 @@ footer a:hover {
     }
 
     /* Adjust About and History Sections */
-    .about-section, .history-section {
-        flex-direction: column; /* Stack the image and text vertically */
-        max-height: unset; /* Remove height restrictions */
-    }
-
-    .about-section .about-image, 
-    .history-section .history-image {
-        max-width: 100%; /* Full width for the image */
-        max-height: unset;
-    }
-    .about-section .about-image{
-        margin-bottom: 0.625rem;
-    }
-    .history-section .history-text{
-        margin-bottom: 0.625rem;
-    }
-    .about-section img, 
-    .history-section img {
-        max-height: 15rem;
-    }
-
-    .about-section .about-text,
-    .history-section .history-text {
-        max-width: 100%; /* Full width for the text section */
-        padding: 0.625rem;
+   .about-section, .history-section {
+        flex-direction: column; 
+        max-height: unset; 
     }
 
     /* Adjust Banner Buttons */
     .menu-btn, .contact-btn {
-        font-size: 0.9rem; /* Smaller buttons on mobile */
+        font-size: 0.9rem; 
         padding: 0.5rem 1.5rem;
     }
 
     /* Adjust Footer */
     footer {
-        font-size: 0.9rem; /* Slightly smaller footer text */
+        font-size: 0.9rem; 
     }
 }
 
@@ -219,12 +221,12 @@ footer a:hover {
     /* About & History Image and Text adjustments */
     .about-section img, 
     .history-section img {
-        height: unset; /* Let image height be dynamic */
+        height: unset; 
     }
 
     .about-section .about-text,
     .history-section .history-text {
-        font-size: 0.9rem; /* Smaller text for readability */
+        font-size: 0.9rem; 
     }
 
     /* Reduce Footer padding */
