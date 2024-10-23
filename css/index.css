@@ -49,7 +49,7 @@ body {
 
 /* Banner Styles */
 .banner {
-    background-color: #543310;
+    background-color: #000;
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
@@ -153,9 +153,10 @@ footer a:hover {
 
     /* Adjust Banner Section */
     .banner-left, .banner-right {
-        flex-basis: 100%; /
+        flex-basis: 100%; 
         margin-bottom: 0.625rem;
     }
+
     /* Adjust About and History Sections */
     .about-section, .history-section {
         flex-direction: column; 
@@ -198,7 +199,7 @@ footer a:hover {
         flex-wrap: wrap;
     }
 
-    /* Adjust About and History Sections */
+   /* Adjust About and History Sections */
    .about-section, .history-section {
         flex-direction: column; 
         max-height: unset; 
