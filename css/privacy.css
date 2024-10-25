@@ -60,14 +60,14 @@ body {
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #007BFF;
+    color: #3a7e5b;
 }
 
 h2 {
     font-size: 1.8em;
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #0056b3;
+    color: #173A2B;
 }
 
 ul {
@@ -78,7 +78,8 @@ ul {
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
     .container {
-        padding: 15px;
+        padding: 1.25rem;
+        margin: 0.8rem auto;
     }
 
     h1 {
@@ -95,19 +96,10 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .nav-links{
-        display: flex;
-        flex-wrap: wrap;
-    }
 
     .container {
-        padding: 10px;
+        padding: 0.625rem;
+        margin: 0.8rem auto;
     }
 
     h1 {
@@ -120,6 +112,16 @@ ul {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+    }
     h1 {
         font-size: 1.5em;
     }
@@ -130,5 +132,6 @@ ul {
 
     .container {
         padding: 5px;
+        margin: 0.8rem auto;
     }
 }
