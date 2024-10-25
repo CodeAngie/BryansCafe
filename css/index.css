@@ -49,15 +49,26 @@ body {
 
 /* Banner Styles */
 .banner {
-    background-color: #543310;
+    background-image: url('../assets/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    margin: 0 0.5rem;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 0.15rem;
     color: white;
 }
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
 .banner-left, .banner-right {
     flex: 1;
     text-align: center;
@@ -75,8 +86,11 @@ body {
     padding: 0.6rem 2rem;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
     margin: 0.6rem;
     border-radius: 10rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }
 .menu-btn:hover, .contact-btn:hover {
     background-color: #ddd;
@@ -85,7 +99,6 @@ body {
 /* Section Styles */
 section {
     margin: 1rem auto;
-    max-width: 86%;
 }
 
 /* About and History Section Styles */
@@ -96,6 +109,7 @@ section {
     padding: 0.4rem;
     border-radius: 8px;
     max-height: 20rem;
+    width: 86%;
 }
 
 /* Image and Text Alignment for About and History */
@@ -151,6 +165,22 @@ footer a:hover {
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
 
+    .banner{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .banner h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .banner-buttons{
+        margin: 0.5rem;
+    }
     /* Adjust Banner Section */
     .banner-left, .banner-right {
         flex-basis: 100%; 
@@ -188,16 +218,6 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .nav-links{
-        display: flex;
-        flex-wrap: wrap;
-    }
 
    /* Adjust About and History Sections */
    .about-section, .history-section {
@@ -218,7 +238,26 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    .banner-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-btn, .contact-btn {
+        padding: 0.6rem 2rem;
+        width: fit-content;
+    }
     /* About & History Image and Text adjustments */
     .about-section img, 
     .history-section img {
