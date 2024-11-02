@@ -50,9 +50,9 @@
     </beverages>
     <otherBeverages>
         <beverage>
-            <name>Soda</name>
-            <image>./assets/images/soda.jpg</image>
-            <price>$3.00</price>
+            <name>Iced Tea</name>
+            <image>./assets/images/icedtea.jpg</image>
+            <price>$4.00</price>
         </beverage>
         <beverage>
             <name>Fresh Juice</name>
@@ -63,6 +63,21 @@
             <name>Bottled Water</name>
             <image>./assets/images/water.jpg</image>
             <price>$2.00</price>
+        </beverage>
+        <beverage>
+            <name>Tea</name>
+            <image>./assets/images/tea.jpg</image>
+            <price>$2.50</price>
+        </beverage>
+        <beverage>
+            <name>Bottled Water</name>
+            <image>./assets/images/water.jpg</image>
+            <price>$2.00</price>
+        </beverage>
+        <beverage>
+            <name>Milk</name>
+            <image>./assets/images/milk.jpg</image>
+            <price>$1.50</price>
         </beverage>
     </otherBeverages>
 </menu>
