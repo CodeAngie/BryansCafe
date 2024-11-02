@@ -70,14 +70,14 @@
             <price>$2.50</price>
         </beverage>
         <beverage>
-            <name>Bottled Water</name>
-            <image>./assets/images/water.jpg</image>
-            <price>$2.00</price>
-        </beverage>
-        <beverage>
             <name>Milk</name>
             <image>./assets/images/milk.jpg</image>
             <price>$1.50</price>
+        </beverage>
+        <beverage>
+            <name>Soda</name>
+            <image>./assets/images/soda.jpg</image>
+            <price>$2.00</price>
         </beverage>
     </otherBeverages>
 </menu>
